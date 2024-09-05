@@ -1,3 +1,4 @@
+!pip install easyocr
 import easyocr
 import cv2
 import time
@@ -6,7 +7,7 @@ import psutil
 import matplotlib.pyplot as plt
 
 # Initialize EasyOCR reader (optimized for CPU, using quantized model)
-reader = easyocr.Reader(['en'], gpu=False, model_storage_directory='./models', download_enabled=False, quantize=True)
+reader = easyocr.Reader(['en'], gpu=False, model_storage_directory='./models', download_enabled=True, quantize=True)
 
 # Load the video
 video_path = '2.mp4'
